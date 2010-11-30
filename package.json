@@ -1,0 +1,32 @@
+{
+   "name": "des",
+   "version": "1.0.0",
+   "main": "des",
+   "description": "A C++ module that does DES encryption.",
+   "maintainers": [
+       {
+           "name": "Peteris Krumins",
+           "email": "peteris.krumins@gmail.com",
+           "web": "http://www.catonmat.net",
+           "twitter": "pkrumins"
+       } 
+   ],
+   "licenses": [
+       {
+           "type": "GPL"
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "http://github.com/pkrumins/node-des.git" 
+       } 
+   ],
+   "engines": {
+       "node": ">=0.2.0"
+   },
+   "scripts": {
+       "install": "node-waf configure build"
+   }
+}
+
