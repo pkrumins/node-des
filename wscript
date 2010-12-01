@@ -16,7 +16,7 @@ def configure(conf):
 def build(bld):
   obj = bld.new_task_gen("cxx", "shlib", "node_addon")
   obj.target = "des"
-  obj.source = "src/des-module.cpp src/d3des.c"
+  obj.source = "src/des-module.cpp src/d3des.cpp"
 
 def shutdown():
   if Options.commands['clean']:
