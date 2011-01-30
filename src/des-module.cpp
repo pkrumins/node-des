@@ -34,19 +34,21 @@ encrypt(const Arguments &args)
         return VException("<data> must be a buffer.");
 
     String::AsciiValue key(args[0]->ToString());
-    Buffer *data = ObjectWrap::Unwrap<Buffer>(args[1]->ToObject());
+    Local<Object> data_obj = args[1]->ToObject();
+    size_t dlen = Buffer::Length(data_obj);
 
-    if (data->length() % 8 != 0)
+    if (dlen % 8 != 0)
         return VException("<data> length must be multiple of 8.");
-
+ 
     unsigned long keybuf[64] = {0};
     deskey((unsigned char *)*key, EN0, keybuf);
 
-    Buffer *retbuf = Buffer::New(data->length());
-    memcpy(retbuf->data(), data->data(), data->length());
-
-    for (int j = 0; j < data->length(); j += 8)
-        des((unsigned char *)retbuf->data()+j, (unsigned char *)retbuf->data()+j, keybuf);
+    Buffer *retbuf = Buffer::New(dlen);
+    unsigned char *ptr = (unsigned char *) Buffer::Data(retbuf);
+    memcpy(ptr, Buffer::Data(data_obj), dlen);
+ 
+    for (int j = 0; j < dlen; j += 8)
+        des(ptr + j, ptr + j, keybuf);
 
     return scope.Close(retbuf->handle_);
 }
