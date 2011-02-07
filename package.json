@@ -1,6 +1,6 @@
 {
    "name": "des",
-   "version": "1.0.1",
+   "version": "2.0.0",
    "main": "des",
    "description": "A C++ module that does DES encryption.",
    "maintainers": [
