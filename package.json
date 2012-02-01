@@ -15,7 +15,7 @@
        "url": "http://github.com/pkrumins/node-des.git" 
    }, 
    "engines": {
-       "node>=0.3.0"
+       "node" : ">=0.3.0"
    },
    "scripts": {
        "install": "node-waf configure build"
