@@ -1,14 +1,15 @@
 {
    "name": "des",
-   "version": "2.0.2",
+   "version": "2.0.3",
    "main": "des",
    "description": "A C++ module that does DES encryption.",
-   "maintainers": {
+   "author": {
        "name": "Peteris Krumins",
        "email": "peteris.krumins@gmail.com",
        "web": "http://www.catonmat.net",
        "twitter": "pkrumins"
    }, 
+   "keywords" : [ "des", "encrypt", "encryption" ],
    "licenses": "GPL",
    "repository": {
        "type": "git",
