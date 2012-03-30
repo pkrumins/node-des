@@ -59,3 +59,4 @@ extern "C" void init (Handle<Object> target)
     target->Set(String::New("encrypt"), FunctionTemplate::New(encrypt)->GetFunction());
 }
 
+NODE_MODULE(des, init);
