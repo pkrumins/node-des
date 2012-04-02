@@ -1,6 +1,6 @@
 {
    "name": "des",
-   "version": "2.0.3",
+   "version": "3.0.0",
    "main": "des",
    "description": "A C++ module that does DES encryption.",
    "author": {
@@ -16,10 +16,10 @@
        "url": "http://github.com/pkrumins/node-des.git" 
    }, 
    "engines": {
-       "node" : ">=0.3.0"
+       "node" : ">=0.6.0"
    },
    "scripts": {
-       "install": "node-waf configure build"
+       "install": "node-gyp configure build"
    }
 }
 
