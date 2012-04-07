@@ -1,7 +1,7 @@
 {
     "name": "des",
     "version": "3.0.1",
-    "main": "des",
+    "main": "build/Release/des.node",
     "description": "A C++ module that does DES encryption.",
     "author": {
         "name": "Peteris Krumins",
