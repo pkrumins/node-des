@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pkrumins/node-des.png)](http://travis-ci.org/pkrumins/node-des)
 This is a node.js module, written in C++, that DES encrypts given buffer
 with the given key. And it actually works, compared to nonsense output that
 node.js's crypto module produced.
